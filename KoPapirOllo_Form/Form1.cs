@@ -43,16 +43,19 @@ namespace KoPapirOllo_Form
         private void btnko_Click(object sender, EventArgs e)
         {
             pbjatekos.Image = Image.FromFile("ko.jpg");
+            Fordulo(1);
         }
 
         private void btnpapir_Click(object sender, EventArgs e)
         {
             pbjatekos.Image = Image.FromFile("papir.jpg");
+            Fordulo(2);
         }
 
         private void btnollo_Click(object sender, EventArgs e)
         {
             pbjatekos.Image = Image.FromFile("ollo.jpg");
+            Fordulo(3);
         }
         private void Fordulo(int jatekos)
         {
