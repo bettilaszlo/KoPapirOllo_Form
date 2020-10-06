@@ -57,6 +57,11 @@ namespace KoPapirOllo_Form
             pbjatekos.Image = Image.FromFile("ollo.jpg");
             Fordulo(3);
         }
+        private void EredmenyBeallitas()
+        {
+            lbljatekos.Text = Jatekos.ToString();
+            lblszamitogep.Text = Szamitogep.ToString();
+        }
         private void Fordulo(int jatekos)
         {
             Random rand = new Random();
@@ -101,7 +106,7 @@ namespace KoPapirOllo_Form
                 }
                
             }
-
+            EredmenyBeallitas();
         }
     }
 }
