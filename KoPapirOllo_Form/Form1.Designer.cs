@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblszamitogep = new System.Windows.Forms.Label();
             this.pbjatekos = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbszamitogep = new System.Windows.Forms.PictureBox();
             this.lblgyoztes = new System.Windows.Forms.Label();
             this.btnko = new System.Windows.Forms.Button();
             this.btnpapir = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbjatekos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbszamitogep)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -90,17 +90,18 @@
             this.pbjatekos.Location = new System.Drawing.Point(19, 83);
             this.pbjatekos.Name = "pbjatekos";
             this.pbjatekos.Size = new System.Drawing.Size(200, 200);
+            this.pbjatekos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbjatekos.TabIndex = 4;
             this.pbjatekos.TabStop = false;
             // 
-            // pictureBox1
+            // pbszamitogep
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(331, 83);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbszamitogep.Location = new System.Drawing.Point(331, 83);
+            this.pbszamitogep.Name = "pbszamitogep";
+            this.pbszamitogep.Size = new System.Drawing.Size(200, 200);
+            this.pbszamitogep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbszamitogep.TabIndex = 5;
+            this.pbszamitogep.TabStop = false;
             // 
             // lblgyoztes
             // 
@@ -119,6 +120,7 @@
             this.btnko.TabIndex = 7;
             this.btnko.Text = "Kő";
             this.btnko.UseVisualStyleBackColor = true;
+            this.btnko.Click += new System.EventHandler(this.btnko_Click);
             // 
             // btnpapir
             // 
@@ -128,6 +130,7 @@
             this.btnpapir.TabIndex = 8;
             this.btnpapir.Text = "Papír";
             this.btnpapir.UseVisualStyleBackColor = true;
+            this.btnpapir.Click += new System.EventHandler(this.btnpapir_Click);
             // 
             // btnollo
             // 
@@ -137,15 +140,18 @@
             this.btnollo.TabIndex = 9;
             this.btnollo.Text = "Olló";
             this.btnollo.UseVisualStyleBackColor = true;
+            this.btnollo.Click += new System.EventHandler(this.btnollo_Click);
             // 
             // btnkilepes
             // 
+            this.btnkilepes.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnkilepes.Location = new System.Drawing.Point(88, 64);
             this.btnkilepes.Name = "btnkilepes";
             this.btnkilepes.Size = new System.Drawing.Size(112, 47);
             this.btnkilepes.TabIndex = 10;
             this.btnkilepes.Text = "Kilépés";
             this.btnkilepes.UseVisualStyleBackColor = true;
+            this.btnkilepes.Click += new System.EventHandler(this.btnkilepes_Click);
             // 
             // btnszabalyok
             // 
@@ -164,13 +170,13 @@
             this.btnuj.TabIndex = 14;
             this.btnuj.Text = "Új játék";
             this.btnuj.UseVisualStyleBackColor = true;
-            this.btnuj.Click += new System.EventHandler(this.button5_Click);
+            this.btnuj.Click += new System.EventHandler(this.btnuj_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Controls.Add(this.lblgyoztes);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbszamitogep);
             this.panel1.Controls.Add(this.pbjatekos);
             this.panel1.Controls.Add(this.lblszamitogep);
             this.panel1.Controls.Add(this.label2);
@@ -192,13 +198,14 @@
             this.panel2.Controls.Add(this.btnko);
             this.panel2.Location = new System.Drawing.Point(8, 338);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(568, 123);
+            this.panel2.Size = new System.Drawing.Size(569, 124);
             this.panel2.TabIndex = 16;
             // 
             // frnfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnkilepes;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -209,7 +216,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kő, papír, olló";
             ((System.ComponentModel.ISupportInitialize)(this.pbjatekos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbszamitogep)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -224,7 +231,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblszamitogep;
         private System.Windows.Forms.PictureBox pbjatekos;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbszamitogep;
         private System.Windows.Forms.Label lblgyoztes;
         private System.Windows.Forms.Button btnko;
         private System.Windows.Forms.Button btnpapir;
